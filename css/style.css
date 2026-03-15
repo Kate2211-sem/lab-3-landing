@@ -1,4 +1,4 @@
-
+/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
@@ -9,25 +9,28 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #252B42;
     line-height: 1.5;
-    max-width: 1440px; 
-    margin: 0 auto;      
-    background: white;  
+    max-width: 1440px;
+    margin: 0;
+    background: white;
 }
 
-
+/* Контейнер */
 .container {
-   max-width: 1440px; 
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0;
+    width: 100%;
 }
 
-
+/* HEADER */
 .header {
     height: 91px;
-    width: 100%;
+    width: 1322px;
+    margin: 0 auto;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
     background: transparent;
     display: flex;
@@ -37,28 +40,30 @@ body {
 .header__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: 100%;
+    padding: 0;
 }
 
-/* Логотип BrandName */
+/* Чтобы BrandName был на 195px от левого края (подбери точное значение) */
 .header__logo {
-    color: #252B42;  /* Цвет из макета */
+    color: #252B42;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
     letter-spacing: 0.1px;
-    margin-right: 42px;  /* Расстояние от логотипа до Home = 42px */
+    width: 145px;
+    height: 32px;
+    margin-left: 93px;   /* чтобы BrandName был на 195px от левого края всего макета */
+    margin-right: 80px;
 }
 
-/* Навигация */
 .nav {
     display: flex;
     align-items: center;
-    gap: 41px;
-    margin-right: 240px;  /* Весь блок навигации сдвинут влево */
+    gap: 21px;
+    margin-right: 240px;
 }
 
 .nav__link {
@@ -69,6 +74,7 @@ body {
     line-height: 24px;
     letter-spacing: 0.2px;
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.3s;
 }
 
@@ -77,11 +83,11 @@ body {
     text-decoration: underline;
 }
 
-/* Правая часть (Login и JOIN US) */
 .header__actions {
     display: flex;
     align-items: center;
-    gap: 45px;  /* Расстояние между Login и JOIN US = 45px */
+    gap: 45px;
+    margin-right: 279px;
 }
 
 .login {
@@ -91,60 +97,65 @@ body {
     font-weight: 700;
     line-height: 22px;
     letter-spacing: 0.2px;
-    text-align: right;
     text-decoration: none;
-    margin-right: 19px;  /* Отступ от Login до JOIN US если нужно точнее */
+    white-space: nowrap;
 }
 
 .login:hover {
     text-decoration: underline;
 }
 
-/* Кнопка JOIN US */
-.btn-primary {
-    background: #96BB7C;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0.2px;
+/* Кнопка JOIN US в шапке */
+.header .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;               /* расстояние между текстом и стрелкой */
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-   
-    /* Отступы внутри кнопки уже 15px сверху/снизу и 25px слева/справа */
-}
-
-
-/* Общие стили для кнопок (если нужны) */
-.btn {
+    background: #96BB7C;
+    color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    line-height: 22px;
+    line-height: 22px;        /* даёт итоговую высоту 52px вместе с padding */
     letter-spacing: 0.2px;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background 0.3s;
+    white-space: nowrap;       /* чтобы текст не переносился */
 }
 
-.btn-primary {
-    background: #96BB7C;
-    color: white;
+.header .btn-primary:hover {
+    background: #7a9b63;
 }
 
-.btn-primary:hover {
-    background: #7a9b63; /* Темнее при наведении */
+/* Стрелка */
+.header .btn-primary::after {
+    content: "→";              /* можно заменить на символ или картинку */
+    font-size: 12px;           /* подгоняем под размер из макета */
+    line-height: 1;            /* убираем лишнюю высоту */
+    display: inline-block;
+    vertical-align: middle;
+    /* если нужно точно выровнять по высоте, можно добавить margin-top: -1px и т.п. */
 }
+
+
 
 .btn-outline {
+    color: #96BB7C;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
     background: transparent;
     border: 1px solid #96BB7C;
-    color: #96BB7C;
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .btn-outline:hover {
@@ -155,44 +166,121 @@ body {
 /* HERO секция */
 .hero {
     position: relative;
-    padding: 150px 0 80px;
-    min-height: 1037px;
-    display: flex;
-    align-items: center;
-    background-color: white;  
-    
-    
+    min-height: 1037px;   /* высота первого слайда */
     width: 100%;
+    background-color: white;
 }
-.hero__woman {
+
+/* Зелёный фон */
+.hero-green {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 625px;
-    height: 731px;
-    z-index: 1;  /* Женщина ПОВЕРХ зеленого фона */
-}
-.hero__woman img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* или contain - поэкспериментируй */
-    object-position: right bottom;
-}
-.hero__green-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
+    top: -105px;
+    left: 0;
     width: 1220px;
     height: 617px;
-    background: #EFF8ED;
-    clip-path: polygon(0 0, 1111px 0, 1220px 109px, 1220px 508px, 1111px 617px, 0 617px);
-    z-index: 0;  /* Должен быть САМЫМ НИЖНИМ */
+    background-image: url('../images/greenfon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 0;
 }
 
+/* Серый фон (greyfon) – скорее всего справа, уточни координаты */
+.hero-gray {
+    position: absolute;
+    top: -200px;               /* измени при необходимости */
+    right: 0;
+    width: 703px;
+    height: 544px;
+    background-image: url('../images/greyfon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 1;
+}
 
+/* Вектора (подбери точные top/right через PerfectPixel) */
+.hero-vector.greyvector {
+    position: absolute;
+    top: -6px;
+    right: 140px;
+    width: 488px;
+    height: 516px;
+    background-image: url('../images/greyvector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-vector.orangevector {
+    position: absolute;
+    top: 60px;
+    right: 470px;
+    width: 210px;
+    height: 274px;
+    background-image: url('../images/orangevector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-vector.telvector {
+    position: absolute;
+    top: -59px;
+    right: 255px;
+    width: 108px;
+    height: 113px;
+    background-image: url('../images/telvector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-vector.linevector {
+    position: absolute;
+    top: 5px;
+    right: 168px;
+    width: 437px;
+    height: 468px;
+    background-image: url('../images/linevector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.hero-vector.bluevector {
+    position: absolute;
+    top: 225px;           /* подбери значение */
+    right: 165px;         /* или left, в зависимости от макета */
+    width: 114px;
+    height: 100px;
+    background-image: url('../images/bluevector.png'); /* если используешь PNG */
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+/* Женщина */
+.hero-woman {
+    position: absolute;
+   top: -177px; 
+    right: 80px;
+    width: 626px;
+    height: 731px;
+    background-image: url('../images/womanfon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    z-index: 3;
+}
+
+/* Контент hero */
 .hero__content {
     position: relative;
-    z-index: 2;  /* Текст ПОВЕРХ всего */
+    z-index: 4;
+    width: 599px;
+    margin-left: 196px;    /* отступ слева 197px */
+    margin-top: 200px;     /* отступ сверху 184px */
 }
 
 .hero__subtitle {
@@ -202,6 +290,8 @@ body {
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
+    margin-bottom: 24px;
+    display: block;
 }
 
 .hero__title {
@@ -211,6 +301,7 @@ body {
     font-weight: 700;
     line-height: 80px;
     letter-spacing: 0.2px;
+    margin-bottom: 24px;
 }
 
 .hero__text {
@@ -220,77 +311,75 @@ body {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.2px;
+    margin-bottom: 24px;
 }
 
 .hero__buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
-/* Специальные стили для кнопок в hero */
-.hero .btn-primary {
-    padding: 15px 40px;
-}
-
+.hero .btn-primary,
 .hero .btn-outline {
     padding: 15px 40px;
 }
-
-/* FEATURES секция */
+.btn-primary {
+    background: #96BB7C;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background: #7a9b63;
+}
+/* FEATURES секция – карточки */
 .features {
-    padding: 80px 0;
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    width: 100%;
+    min-height: 500px; /* чтобы не схлопнулось */
 }
 
 .features__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-    gap: 30px; /* Расстояние между карточками 30px как в макете */
+    grid-template-columns: repeat(3, 328px);
+    gap: 30px;
+    position: absolute;
+    top: -572px;          /* подбери это значение (было 665, сейчас 580 – выше) */
+    left: 204px;          /* отступ слева 197px */
+    margin: 0;
 }
 
-/* Карточка */
 .feature-card {
     display: flex;
-    width: 328px;
-    padding: 35px 40px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    width: 328px;
+    padding: 35px 30px;
     background: #FFF;
     box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+    /* gap: 20px; — УДАЛИ ЭТУ СТРОКУ */
 }
 
-/* Иконка в карточке */
 .feature-card__icon {
     width: 72px;
     height: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    margin-bottom: 20px; /* Отступ от иконки до заголовка */
+    margin-bottom: 20px;   /* отступ после иконки */
 }
 
-.feature-card__icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-/* Для первой иконки (оранжевая) */
-.feature-card:nth-child(1) .feature-card__icon svg path {
-    fill: #F68820;
-}
-
-/* Для второй иконки (голубая) */
-.feature-card:nth-child(2) .feature-card__icon svg path {
-    fill: #6FA4D8;
-}
-
-/* Для третьей иконки (нужно посмотреть цвет в макете) */
-.feature-card:nth-child(3) .feature-card__icon svg path {
-    fill: #96BB7C; /* Предположительно зеленый, как основной цвет */
-}
-
-/* Заголовок карточки */
 .feature-card__title {
     color: #252B42;
     font-family: 'Montserrat', sans-serif;
@@ -298,18 +387,16 @@ body {
     font-weight: 700;
     line-height: 32px;
     letter-spacing: 0.1px;
-    margin-bottom: 20px; /* Отступ от заголовка до красной линии */
+    margin-bottom: 20px;    /* отступ после заголовка */
 }
 
-/* Красная линия */
 .feature-card__line {
     width: 50px;
     height: 2px;
-    background: #E74040; /* Красный цвет */
-    margin-bottom: 40px; /* Отступ от красной линии до текста */
+    background: #E74040;
+    margin-bottom: 20px;    /* отступ после линии до текста */
 }
 
-/* Текст карточки */
 .feature-card__text {
     color: #737373;
     font-family: 'Montserrat', sans-serif;
@@ -317,34 +404,5 @@ body {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.2px;
-}
-
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .header__inner {
-        flex-direction: column;
-        gap: 20px;
-        height: auto;
-        padding: 20px 0;
-    }
-    
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .hero__content {
-        width: 100%;
-        max-width: 599px;
-    }
-    
-    .features__grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-    
-    .feature-card {
-        width: 100%;
-        max-width: 328px;
-    }
+    margin-bottom: 0;        /* нижний отступ не нужен */
 }
