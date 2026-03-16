@@ -427,3 +427,175 @@ body {
     margin-bottom: 0;  
     margin-left: 2px;      /* нижний отступ не нужен */
 }
+/* Stats секция – адаптивная версия */
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;   /* чтобы не расползалась на огромных экранах */
+  height: 805px;
+  padding: 0 195px;
+  margin: -686px auto 0 auto; /* отступ сверху подбери по макету */
+  box-sizing: border-box;
+}
+
+.stats__container {
+  width: 100%;
+  max-width: 1050px;   /* вместо жёсткой ширины */
+  height: 485px;
+}
+
+.stats__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 8.411875rem;    /* 134.59px / 16 ≈ 8.412rem, можно округлить до 8.4rem */
+  /* или gap: 12%; если хочешь относительно ширины родителя, но тогда надо подбирать */
+}
+
+/* Левая колонка – размеры пока в px (картинки фиксированы) */
+.stats__images {
+  position: relative;
+  width: 376.939px;
+  height: 440.611px;
+  flex-shrink: 0;
+}
+
+.stats__main-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.stats__image-bg {
+  position: absolute;
+  width: 322.655px;
+  height: 410.502px;
+  border-radius: 27.625px;
+  background: #CFE4E7;
+  top:calc(50% + 13px);
+ left: calc(50% + 75px);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.stats__image-girl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  left: 91px;
+}
+
+/* Миниатюры – размеры и позиции тоже пока в px, но можно будет скорректировать позже */
+.stats__thumb {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+}
+
+.thumb-1 {
+  width: 115px;
+  height: 58px;
+  background-image: url('../images/pinkimage.png');
+  top: 139px;
+  left: 26px;
+}
+
+.thumb-2 {
+  width: 155px;
+  height: 106px;
+  background-image: url('../images/whiteimage.png');
+  bottom: 0;
+  right: auto;
+  left: 57px;
+  top: 325px;
+}
+
+.thumb-3 {
+  width: 135px;
+  height: 125px;
+  background-image: url('../images/ball.png');
+  top: calc(50% + 1px);
+  right: -151px;
+  transform: translateY(-50%);
+}
+
+/* Правая колонка – все размеры в rem */
+.stats__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.1875rem;      /* 35px */
+  max-width: 25rem;    /* примерно 400px, подбери точнее */
+  flex-shrink: 0;
+}
+
+.stats__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;      /* 40px */
+  font-weight: 700;
+  line-height: 1.25;      /* 50px / 40px */
+  letter-spacing: 0.2px;
+  margin: 0;
+  position: relative;
+    top: 46px;   /* смещение вниз */
+    left: 17px;  /* смещение вправо */
+}
+
+.stats__line {
+  width: 5.875rem;        /* 94px */
+  height: 0.4375rem;      /* 7px */
+  background: #E74040;
+  
+    position: relative;
+    top: -130px;    /* двигает вверх */
+    left: 18px;    /* двигает вправо */
+}
+
+.stats__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;    /* 14px */
+  font-weight: 400;
+  line-height: 1.4286;    /* 20/14 */
+  letter-spacing: 0.2px;
+  margin: 0;
+  position: relative;
+    top: 7px;   /* смещение вниз */
+    left: 17.5px; 
+}
+
+.stats__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.627rem;          /* 10px */
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;    /* 14px */
+  font-weight: 700;
+  line-height: 1.7143;    /* 24/14 */
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: color 0.3s;
+   position: relative;
+    top: 8px;   /* смещение вниз */
+    left: 15px;
+}
+
+.stats__link:hover {
+  color: #7a9b63;
+}
+
+.stats__arrow {
+  width: 0.5625rem;       /* 9px */
+  height: 1rem;           /* 16px */
+  fill: currentColor;
+}
