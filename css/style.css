@@ -10,7 +10,7 @@ body {
     color: #252B42;
     line-height: 1.5;
     max-width: 1440px;
-    margin: 0;
+    margin: 0 auto;
     background: white;
 }
 
@@ -55,15 +55,19 @@ body {
     letter-spacing: 0.1px;
     width: 145px;
     height: 32px;
-    margin-left: 93px;   /* чтобы BrandName был на 195px от левого края всего макета */
+    margin-left: 132px;   /* чтобы BrandName был на 195px от левого края всего макета */
     margin-right: 80px;
+    margin-top:2px;
+
 }
 
 .nav {
     display: flex;
-    align-items: center;
+    align-items: normal;
     gap: 21px;
-    margin-right: 240px;
+    margin-right: 180px;
+    margin-left: 4px;
+
 }
 
 .nav__link {
@@ -99,6 +103,7 @@ body {
     letter-spacing: 0.2px;
     text-decoration: none;
     white-space: nowrap;
+    margin-left: 57px;
 }
 
 .login:hover {
@@ -122,7 +127,9 @@ body {
     letter-spacing: 0.2px;
     cursor: pointer;
     transition: background 0.3s;
-    white-space: nowrap;       /* чтобы текст не переносился */
+    white-space: nowrap;  
+    margin-left: -1px;
+         /* чтобы текст не переносился */
 }
 
 .header .btn-primary:hover {
@@ -174,7 +181,7 @@ body {
 /* Зелёный фон */
 .hero-green {
     position: absolute;
-    top: -105px;
+    top: -80px;
     left: 0;
     width: 1220px;
     height: 617px;
@@ -202,7 +209,7 @@ body {
 /* Вектора (подбери точные top/right через PerfectPixel) */
 .hero-vector.greyvector {
     position: absolute;
-    top: -6px;
+    top: 18px;
     right: 140px;
     width: 488px;
     height: 516px;
@@ -214,7 +221,7 @@ body {
 
 .hero-vector.orangevector {
     position: absolute;
-    top: 60px;
+    top: 84px;
     right: 470px;
     width: 210px;
     height: 274px;
@@ -226,7 +233,7 @@ body {
 
 .hero-vector.telvector {
     position: absolute;
-    top: -59px;
+    top: -40px;
     right: 255px;
     width: 108px;
     height: 113px;
@@ -238,7 +245,7 @@ body {
 
 .hero-vector.linevector {
     position: absolute;
-    top: 5px;
+    top: 30px;
     right: 168px;
     width: 437px;
     height: 468px;
@@ -249,7 +256,7 @@ body {
 }
 .hero-vector.bluevector {
     position: absolute;
-    top: 225px;           /* подбери значение */
+    top: 248px;           /* подбери значение */
     right: 165px;         /* или left, в зависимости от макета */
     width: 114px;
     height: 100px;
@@ -263,7 +270,7 @@ body {
 /* Женщина */
 .hero-woman {
     position: absolute;
-   top: -177px; 
+   top: -150px; 
     right: 80px;
     width: 626px;
     height: 731px;
@@ -290,8 +297,13 @@ body {
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.1px;
-    margin-bottom: 24px;
+    margin-bottom: 35px;
     display: block;
+    margin-top: -24px;
+    margin-left: -1.5px;
+    
+   
+    
 }
 
 .hero__title {
@@ -301,7 +313,7 @@ body {
     font-weight: 700;
     line-height: 80px;
     letter-spacing: 0.2px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 .hero__text {
@@ -311,12 +323,20 @@ body {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.2px;
-    margin-bottom: 24px;
+    margin-bottom: 35px;
+    margin-top: 50px;
+     margin-left: 2px;
+
+    
+
+
+
 }
 
 .hero__buttons {
     display: flex;
     gap: 10px;
+    margin-left: -2.5px;  
 }
 
 .hero .btn-primary,
@@ -355,8 +375,8 @@ body {
     grid-template-columns: repeat(3, 328px);
     gap: 30px;
     position: absolute;
-    top: -572px;          /* подбери это значение (было 665, сейчас 580 – выше) */
-    left: 204px;          /* отступ слева 197px */
+    top: -540px;          /* подбери это значение (было 665, сейчас 580 – выше) */
+    left: 205px;          /* отступ слева 197px */
     margin: 0;
 }
 
@@ -404,5 +424,6 @@ body {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.2px;
-    margin-bottom: 0;        /* нижний отступ не нужен */
+    margin-bottom: 0;  
+    margin-left: 2px;      /* нижний отступ не нужен */
 }
