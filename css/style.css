@@ -1223,3 +1223,112 @@ body {
   margin-top: -11px;
   margin-left: -1px;
 }
+/* Newsletter секция – точные размеры и отступы */
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;    /* не центрируем вертикально, а прижимаем к верху */
+  width: 1440px;
+  height: 594px;              /* фиксированная высота */
+  padding: 0 195px;           /* горизонтальные отступы */
+  margin: 0 auto;
+  background: #FFF2F3;        /* розовато-бежевый фон */
+  box-sizing: border-box;
+   margin-top: 96px;
+}
+
+.newsletter__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1050px;          /* ограничение ширины контента */
+  margin-top: 160px;          /* отступ сверху от верхнего края секции */
+  text-align: center;
+}
+
+.newsletter__subtitle {
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 0 0 10px 0;
+}
+
+.newsletter__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  margin: 0 0 10px 0;
+}
+
+.newsletter__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 0 0 80px 0;         /* отступ до формы */
+  max-width: 600px;
+  margin-left: 1px;
+  margin-top: 2px;
+  word-spacing:  2px;
+}
+
+.newsletter__form {
+  display: flex;
+  width: 688px;               /* ширина формы */
+  border-radius: 5px;
+  border: 1px solid #E5E5E5;
+  background: #F9F9F9;
+  overflow: hidden;           /* чтобы кнопка не вылезала за скругление */
+}
+
+.newsletter__input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  outline: none;
+}
+
+.newsletter__input::placeholder {
+  color: #737373;
+  opacity: 1;
+}
+
+.newsletter__button {
+  width: 117px;
+  height: 58px;               /* фиксированная высота */
+  padding: 15px 22.5px;
+  background: #96BB7C;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  border: none;
+  border-radius: 0 5px 5px 0; /* скругление только справа */
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter__button:hover {
+  background: #7a9b63;
+}
