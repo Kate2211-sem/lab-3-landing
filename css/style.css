@@ -1332,3 +1332,110 @@ body {
 .newsletter__button:hover {
   background: #7a9b63;
 }
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  padding: 50px 195px 0;
+  margin: 0 auto;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.footer__container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 1050px;
+}
+
+.footer__col {
+  flex: 1;
+  min-width: 0;
+}
+
+.footer__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  margin: 0 0 20px 0;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list li {
+  margin-bottom: 10px;
+}
+
+.footer__list a {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__list a:hover {
+  color: #96BB7C;
+}
+
+/* Контактная информация */
+.contact-list li {
+  display: flex;            /* иконка и текст в одну строку */
+  align-items: flex-start;  /* выравнивание по верху (если текст занимает несколько строк) */
+  gap: 10px;
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+/* Иконки */
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;           /* чтобы иконка не сжималась */
+}
+
+.icon.phone {
+  background-image: url('../images/icon-phone.png');
+}
+
+.icon.location {
+  background-image: url('../images/icon-location.png');
+}
+
+.icon.email {
+  background-image: url('../images/icon-email.png');
+}
+.footer__col:nth-child(2) {
+  transform: translateX(-35px);
+}
+.footer__col:nth-child(3) {
+  transform: translateX(-65px);
+}
+.footer__col:nth-child(4) {
+  transform: translateX(-100px);
+}
+.footer__col:nth-child(5) {
+  transform: translateX(-130px);
+  white-space: nowrap;
+}
