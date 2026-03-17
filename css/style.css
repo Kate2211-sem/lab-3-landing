@@ -1,0 +1,1225 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #252B42;
+    line-height: 1.5;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: white;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+/* HEADER */
+.header {
+    height: 91px;
+    width: 1322px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+/* Чтобы BrandName был на 195px от левого края (подбери точное значение) */
+.header__logo {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    width: 145px;
+    height: 32px;
+    margin-left: 132px;   /* чтобы BrandName был на 195px от левого края всего макета */
+    margin-right: 80px;
+    margin-top:2px;
+
+}
+
+.nav {
+    display: flex;
+    align-items: normal;
+    gap: 21px;
+    margin-right: 180px;
+    margin-left: 4px;
+
+}
+
+.nav__link {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #96BB7C;
+    text-decoration: underline;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-right: 279px;
+}
+
+.login {
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 57px;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка JOIN US в шапке */
+.header .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;               /* расстояние между текстом и стрелкой */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #96BB7C;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;        /* даёт итоговую высоту 52px вместе с padding */
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;  
+    margin-left: -1px;
+         /* чтобы текст не переносился */
+}
+
+.header .btn-primary:hover {
+    background: #7a9b63;
+}
+
+/* Стрелка */
+.header .btn-primary::after {
+    content: "→";              /* можно заменить на символ или картинку */
+    font-size: 12px;           /* подгоняем под размер из макета */
+    line-height: 1;            /* убираем лишнюю высоту */
+    display: inline-block;
+    vertical-align: middle;
+    /* если нужно точно выровнять по высоте, можно добавить margin-top: -1px и т.п. */
+}
+
+
+
+.btn-outline {
+    color: #96BB7C;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    background: transparent;
+    border: 1px solid #96BB7C;
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: #96BB7C;
+    color: white;
+}
+
+/* HERO секция */
+.hero {
+    position: relative;
+    min-height: 1037px;   /* высота первого слайда */
+    width: 100%;
+    background-color: white;
+}
+
+/* Зелёный фон */
+.hero-green {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 1220px;
+    height: 617px;
+    background-image: url('../images/greenfon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 0;
+}
+
+/* Серый фон (greyfon) – скорее всего справа, уточни координаты */
+.hero-gray {
+    position: absolute;
+    top: -200px;               /* измени при необходимости */
+    right: 0;
+    width: 703px;
+    height: 544px;
+    background-image: url('../images/greyfon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 1;
+}
+
+/* Вектора (подбери точные top/right через PerfectPixel) */
+.hero-vector.greyvector {
+    position: absolute;
+    top: 18px;
+    right: 140px;
+    width: 488px;
+    height: 516px;
+    background-image: url('../images/greyvector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-vector.orangevector {
+    position: absolute;
+    top: 84px;
+    right: 470px;
+    width: 210px;
+    height: 274px;
+    background-image: url('../images/orangevector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-vector.telvector {
+    position: absolute;
+    top: -40px;
+    right: 255px;
+    width: 108px;
+    height: 113px;
+    background-image: url('../images/telvector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-vector.linevector {
+    position: absolute;
+    top: 30px;
+    right: 168px;
+    width: 437px;
+    height: 468px;
+    background-image: url('../images/linevector.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.hero-vector.bluevector {
+    position: absolute;
+    top: 248px;           /* подбери значение */
+    right: 165px;         /* или left, в зависимости от макета */
+    width: 114px;
+    height: 100px;
+    background-image: url('../images/bluevector.png'); /* если используешь PNG */
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+/* Женщина */
+.hero-woman {
+    position: absolute;
+   top: -150px; 
+    right: 80px;
+    width: 626px;
+    height: 731px;
+    background-image: url('../images/womanfon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    z-index: 3;
+}
+
+/* Контент hero */
+.hero__content {
+    position: relative;
+    z-index: 4;
+    width: 599px;
+    margin-left: 196px;    /* отступ слева 197px */
+    margin-top: 200px;     /* отступ сверху 184px */
+}
+
+.hero__subtitle {
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 35px;
+    display: block;
+    margin-top: -24px;
+    margin-left: -1.5px;
+    
+   
+    
+}
+
+.hero__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.2px;
+    margin-bottom: 30px;
+}
+
+.hero__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    margin-bottom: 35px;
+    margin-top: 50px;
+     margin-left: 2px;
+
+    
+
+
+
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: -2.5px;  
+}
+
+.hero .btn-primary,
+.hero .btn-outline {
+    padding: 15px 40px;
+}
+.btn-primary {
+    background: #96BB7C;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background: #7a9b63;
+}
+/* FEATURES секция – карточки */
+.features {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    width: 100%;
+    min-height: 500px; /* чтобы не схлопнулось */
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 328px);
+    gap: 30px;
+    position: absolute;
+    top: -540px;          /* подбери это значение (было 665, сейчас 580 – выше) */
+    left: 205px;          /* отступ слева 197px */
+    margin: 0;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 328px;
+    padding: 35px 30px;
+    background: #FFF;
+    box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+    /* gap: 20px; — УДАЛИ ЭТУ СТРОКУ */
+}
+
+.feature-card__icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;   /* отступ после иконки */
+}
+
+.feature-card__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    margin-bottom: 20px;    /* отступ после заголовка */
+}
+
+.feature-card__line {
+    width: 50px;
+    height: 2px;
+    background: #E74040;
+    margin-bottom: 20px;    /* отступ после линии до текста */
+}
+
+.feature-card__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-bottom: 0;  
+    margin-left: 2px;      /* нижний отступ не нужен */
+}
+/* Stats секция – адаптивная версия */
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;   /* чтобы не расползалась на огромных экранах */
+  height: 805px;
+  padding: 0 195px;
+  margin: -686px auto 0 auto; /* отступ сверху подбери по макету */
+  box-sizing: border-box;
+}
+
+.stats__container {
+  width: 100%;
+  max-width: 1050px;   /* вместо жёсткой ширины */
+  height: 485px;
+}
+
+.stats__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 8.411875rem;    /* 134.59px / 16 ≈ 8.412rem, можно округлить до 8.4rem */
+  /* или gap: 12%; если хочешь относительно ширины родителя, но тогда надо подбирать */
+}
+
+/* Левая колонка – размеры пока в px (картинки фиксированы) */
+.stats__images {
+  position: relative;
+  width: 376.939px;
+  height: 440.611px;
+  flex-shrink: 0;
+}
+
+.stats__main-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.stats__image-bg {
+  position: absolute;
+  width: 322.655px;
+  height: 410.502px;
+  border-radius: 27.625px;
+  background: #CFE4E7;
+  top:calc(50% + 13px);
+ left: calc(50% + 75px);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.stats__image-girl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  left: 91px;
+}
+
+/* Миниатюры – размеры и позиции тоже пока в px, но можно будет скорректировать позже */
+.stats__thumb {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+}
+
+.thumb-1 {
+  width: 115px;
+  height: 58px;
+  background-image: url('../images/pinkimage.png');
+  top: 139px;
+  left: 26px;
+}
+
+.thumb-2 {
+  width: 155px;
+  height: 106px;
+  background-image: url('../images/whiteimage.png');
+  bottom: 0;
+  right: auto;
+  left: 57px;
+  top: 325px;
+}
+
+.thumb-3 {
+  width: 135px;
+  height: 125px;
+  background-image: url('../images/ball.png');
+  top: calc(50% + 1px);
+  right: -151px;
+  transform: translateY(-50%);
+}
+
+/* Правая колонка – все размеры в rem */
+.stats__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.1875rem;      /* 35px */
+  max-width: 25rem;    /* примерно 400px, подбери точнее */
+  flex-shrink: 0;
+}
+
+.stats__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;      /* 40px */
+  font-weight: 700;
+  line-height: 1.25;      /* 50px / 40px */
+  letter-spacing: 0.2px;
+  margin: 0;
+  position: relative;
+    top: 46px;   /* смещение вниз */
+    left: 17px;  /* смещение вправо */
+}
+
+.stats__line {
+  width: 5.875rem;        /* 94px */
+  height: 0.4375rem;      /* 7px */
+  background: #E74040;
+  
+    position: relative;
+    top: -122px;    /* двигает вверх */
+    left: 18px;    /* двигает вправо */
+}
+
+.stats__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;    /* 14px */
+  font-weight: 400;
+  line-height: 1.4286;    /* 20/14 */
+  letter-spacing: 0.2px;
+  margin: 0;
+  position: relative;
+    top: 12px;   /* смещение вниз */
+    left: 16px; 
+}
+
+.stats__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.627rem;          /* 10px */
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;    /* 14px */
+  font-weight: 700;
+  line-height: 1.7143;    /* 24/14 */
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: color 0.3s;
+   position: relative;
+    top: 8px;   /* смещение вниз */
+    left: 15px;
+}
+
+.stats__link:hover {
+  color: #7a9b63;
+}
+
+.stats__arrow {
+  width: 0.5625rem;       /* 9px */
+  height: 1rem;           /* 16px */
+  fill: currentColor;
+}
+.promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  padding: 0 195px;
+  margin: 160px auto 0 auto; /* отступ сверху 160px */
+  box-sizing: border-box;
+}
+
+.promo__container {
+  width: 1050px;
+  padding: 160px 0; /* вертикальные отступы внутри контейнера */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.promo__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 40px; /* или рассчитать, чтобы поместились */
+}
+
+.promo__content {
+  flex: 0 1 auto;
+  max-width: 450px; /* примерно, чтобы текст не растягивался */
+}
+
+.promo__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  margin: 0 0 20px 0;
+  margin-left: 1px;
+  margin-top: -230px;
+  
+}
+
+.promo__line {
+  width: 94px;
+  height: 7px;
+  background: #E74040;
+  margin-bottom: 20px;
+  position: relative;
+    top: -112px;    /* двигает вверх */
+    left: -2px;    /* двигает вправо */
+
+}
+
+.promo__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin-bottom: 30px;
+  margin-top: -13px;
+  margin-left: 1px;
+
+}
+
+.promo__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-top: 4px;
+  margin-left: -2px;
+
+}
+
+.promo__link:hover {
+  color: #7a9b63;
+}
+
+.promo__arrow {
+  width: 9px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.promo__media {
+  width: 513px;
+  height: 363px;
+  flex-shrink: 0;
+}
+
+.promo__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/foto3.png'); /* замени на своё */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px; /* если нужно */
+  overflow: hidden;
+  margin-top: -150px;
+  margin-left: 0px;
+}
+
+.promo__image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 14.58%, rgba(56,56,56,0.84) 100%);
+  pointer-events: none; /* чтобы не мешать клику */
+}
+
+.promo__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 91.6px;  /* из твоих данных: padding 34.8px 36.8px в сумме дают примерно 70px, но точнее 73.6px - это диаметр? У тебя написано border-radius 73.6px, значит круг. Ширина и высота должны быть одинаковы. Я возьму 73.6px */
+  height: 87.6px;
+  background: #96BB7C;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.promo__play span {
+  display: block;
+  margin-left: 3px; /* небольшой сдвиг для визуального центрирования треугольника */
+}
+/* Courses секция */
+.courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  padding: 0 195px;
+  margin: 0 auto;
+  box-sizing: border-box;
+   margin-top: -158px;
+}
+
+.courses__container {
+  width: 1050px;
+  padding: 112px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 112px;
+}
+
+.courses__header {
+  width: 691px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: -360px;
+}
+
+.courses__subtitle {
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.courses__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  margin: 0;
+   word-spacing: -3px;
+}
+
+.courses__description {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  word-spacing: 1px;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: 238px 241px 240px 240px;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Карточка курса */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* легкая тень, при необходимости убери */
+}
+
+.course-card__image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.course-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                     /* единый отступ между всеми элементами */
+  padding: 25px 25px 35px 25px;
+}
+
+.course-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+   margin-left: -4px;
+}
+
+.course-card__category {
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.course-card__rating {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  gap: 5px;
+  background: #252B42;   /* тёмный фон для рейтинга, если не нужен – удали */
+  border-radius: 20px;
+}
+
+.course-card__star {
+  width: 16px;
+  height: 16px;
+}
+
+.course-card__rating-value {
+  color: #fff;            /* если фон тёмный, текст белый */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+
+.course-card__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  margin: 0;
+  word-spacing: -1px;
+  margin-left: -2px;
+}
+
+.course-card__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  max-width: 182px;
+ 
+  
+
+  
+}
+.courses__description {
+  margin-left: 3px; 
+  margin-top: 1px;/* или нужное тебе значение */
+}
+
+.course-card__sales {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.course-card__sales-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.course-card__sales-text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  
+  margin-left: 3px;
+}
+
+
+.course-card__prices {
+  display: flex;
+  gap: 5px;
+}
+
+.course-card__old-price {
+  color: #BDBDBD;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.course-card__new-price {
+  color: #FFAB71;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.course-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;               /* расстояние между текстом и стрелкой */
+  padding: 10px 20px;
+  border: 1px solid #96BB7C;
+  border-radius: 30px;
+  background: transparent;
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: all 0.3s;
+  align-self: flex-start;
+  
+  margin-left: -3px;
+  margin-top: 5px;
+
+}
+
+.course-card__link svg {
+  width: 9.143px;          /* точно по макету */
+  height: 16px;
+}
+
+.course-card__link:hover {
+  background: #96BB7C;
+  color: #fff;
+}
+
+.course-card__link:hover svg path {
+  fill: #fff;              /* чтобы стрелка тоже меняла цвет при наведении */
+}
+/* Плашка Sale */
+.course-card__image {
+  position: relative; /* чтобы дочерние элементы позиционировались относительно изображения */
+}
+
+.course-card__badge {
+  position: absolute;
+  top: 20px;          /* отступ сверху */
+  left: 20px;         /* отступ слева */
+  display: inline-flex;
+  padding: 0 10px;
+  align-items: center;
+  background: #E74040; /* цвет опасности */
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  z-index: 2;         /* чтобы быть поверх изображения */
+}
+
+/* Контейнер для трёх иконок */
+.course-card__icons {
+  position: absolute;
+  bottom: 24px;       /* отступ снизу */
+  left: 50px;         /* отступ слева */
+  display: flex;
+  gap: 10px;          /* расстояние между иконками */
+  z-index: 2;
+}
+
+/* Общие стили для каждой иконки */
+.course-card__icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 44.786px;  /* или 50% – тоже круг */
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px;          /* размер символа */
+  line-height: 1;
+  color: #252B42;           /* цвет иконки (можно поменять) */
+  cursor: default;          /* или pointer, если нужна кликабельность */
+}
+
+/* Если хочешь, чтобы иконки реагировали при наведении */
+.course-card__icon:hover {
+  background: #f0f0f0;
+}
+.course-card__prices {
+  margin-left: 4px;
+  margin-top: 5px;;
+}
+/* Testimonials секция */
+/* Testimonials секция */
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  padding: 0 195px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 239px;
+}
+
+.testimonials__container {
+  width: 1044px;                /* как в задании */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 96px;                    /* отступ между заголовком и карточками */
+}
+
+.testimonials__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.testimonials__subtitle {
+  color: #96BB7C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.testimonials__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  margin-left: -2px;
+  word-spacing: -6px;
+}
+
+.testimonials__description {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  max-width: 600px;
+  margin-left: 1px;
+  word-spacing:0px ;
+}
+
+.testimonials__row {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Карточка отзыва */
+.testimonial-card {
+  display: flex;
+  padding: 25px 25px 0 25px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  background: #FFF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* лёгкая тень, можно убрать */
+  flex: 1;  /* чтобы обе карточки были одинаковой ширины */
+}
+
+.testimonial-card__avatar {
+  width: 128px;
+  height: 128px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;  /* отступ до блока с текстом */
+}
+
+.testimonial-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-card__content {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  align-self: stretch;
+  text-align: center;
+}
+
+.testimonial-card__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  max-width: 320px;
+  margin: 0;
+  margin-top: -30px;
+  margin-left:-10px;
+}
+
+.testimonial-card__rating {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* Звёзды (используем фоновые изображения) */
+.star {
+  display: inline-block;
+  width: 22.014px;
+  height: 22.014px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Полная звезда – замени на свой путь к закрашенной звезде */
+.star.full {
+  background-image: url('../images/star1.png');
+}
+
+/* Пустая звезда (только обводка) – замени на свой путь */
+.star.empty {
+  background-image: url('../images/star0.png');
+}
+
+/* Имя и должность */
+.testimonial-card__name {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  margin: 0;
+  margin-left: -2px;
+  word-spacing: 0px;
+}
+
+.testimonial-card__position {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  margin-top: -11px;
+  margin-left: -1px;
+}
