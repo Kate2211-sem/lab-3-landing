@@ -1913,6 +1913,210 @@ display: inline-flex;
     height: 18px;
   }
 }
+@media (max-width: 320px) {
+    .header__logo {
+    font-size: 16px;        /* Было 24px */
+    margin-right: 5px;      /* Убираем лишний отступ */
+    margin-top: 26px;
+  }
 
+  /* 2. Делаем Бургер-меню компактнее */
+  .burger {
+    width: 20px;            /* Было 30px */
+    height: 14px;           /* Было 22px */
+    margin-right: 16px;      /* Уменьшаем отступ справа */
+    margin-top: 26px;
+  }
+  .burger span {
+    height: 2px;
+  }
 
+  /* 3. Уменьшаем ссылку Login */
+  .login {
+    font-size: 10px;        /* Было 12-14px */
+    margin-top: 26px;
+    margin-right: 5px;
+  }
 
+  /* 4. Уменьшаем кнопку JOIN US */
+  .header .btn-primary {
+    padding: 5px 8px;       /* Было 15px 25px */
+    font-size: 8px;        /* Было 12-14px */
+    margin-top: 18px;
+    line-height: 1.5;
+    
+  }
+  
+  /* Убираем стрелку внутри кнопки, если она мешает */
+  .header .btn-primary::after {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+  .hero__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .hero__text {
+    font-size: 11px;
+  }
+  
+  .stats__title,
+  .promo__title,
+  .courses__title,
+  .testimonials__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .feature-card__title {
+    font-size: 14px;
+  }
+   .features {
+    margin-top: 0;
+    padding: 40px 20px;
+  }
+  
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .courses {
+    padding: 0 20px;
+  }
+  
+  .courses__header {
+    margin-left: 0;
+    margin-top: 0;
+    word-spacing: normal;
+  }
+  
+  .courses__title {
+    font-size: 24px;
+  }
+  
+  .courses__grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 25px;
+  }
+  
+  .course-card {
+    width: 100%;
+    max-width: 280px; /* УЖЕ! Было 100% */
+    margin: 0 auto; /* Центрируем карточку */
+  }
+  
+  .course-card__image {
+    height: 220px; /* Меньше высота картинки */
+  }
+  
+  .course-card__content {
+    padding: 20px; /* Меньше отступы */
+  }
+  
+  .course-card__title {
+    font-size: 14px; /* Меньше заголовок */
+  }
+  
+  .course-card__text {
+    font-size: 12px; /* Меньше текст */
+  }
+  
+  .course-card__link {
+    padding: 8px 16px; /* Меньше кнопка */
+    font-size: 12px;
+  }
+  
+  /* ===== TESTIMONIALS ===== */
+  .testimonials {
+    padding: 0 20px;
+  }
+  
+  .testimonials__header {
+    margin-top: 60px;
+  }
+  
+  .testimonials__title {
+    font-size: 24px;
+    word-spacing: normal;
+  }
+  
+  .testimonials__row {
+    flex-direction: column;
+  }
+  
+  .testimonial-card {
+    min-width: auto;
+    width: 100%;
+    max-width: 280px; /* Тоже уже */
+    margin: 0 auto;
+  }
+  
+  /* ===== NEWSLETTER ===== */
+  .newsletter__form {
+    flex-direction: column;
+    height: auto;
+    transform: none;
+    border: none;
+    background: transparent;
+    gap: 10px; /* Расстояние между полем и кнопкой */
+  }
+
+  /* 2. Поле ввода Email (делаем на всю ширину с рамкой) */
+  .newsletter__input {
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 12px 15px;
+    background: #F9F9F9;
+  }
+
+  /* 3. САМА КНОПКА SUBSCRIBE (делаем маленькой) */
+  .newsletter__button {
+    width: auto;        /* !ВАЖНО: Ширина по содержимому, не на весь экран */
+    padding: 5px 10px; /* Уменьшаем отступы внутри (было 15px 22.5px) */
+    font-size: 11px;    /* Уменьшаем шрифт (было 14px) */
+    border-radius: 5px;
+    margin: 0 auto;     /* Центрируем кнопку */
+    display: block;
+  }
+  
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 40px 20px;
+  }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .footer__col:nth-child(3),
+  .footer__col:nth-child(4) {
+    display: none;
+  }
+  
+  .footer__col:nth-child(5) {
+    grid-column: span 2;
+    width: 100%;
+  }
+  
+  .footer__col {
+    width: auto;
+  }
+  
+  .footer__title {
+    font-size: 14px;
+  }
+  
+  .footer__list a {
+    font-size: 12px;
+  }
+
+}
