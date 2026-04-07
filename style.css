@@ -1548,5 +1548,371 @@ display: inline-flex;
   height: 16px;
 }
 }
+@media (max-width: 480px) {
+  /* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+  .container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 20px;
+  }
+
+  /* ===== HEADER И БУРГЕР ===== */
+  .header {
+    height: 70px;
+    position: fixed;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  
+  .header__inner {
+    height: 70px;
+    padding-left: 0; /* Отступы внутри контейнера */
+  }
+
+  .header__logo {
+    margin-top: 24px;
+    margin-right: 0;
+  }
+
+  /* Скрываем меню навигации */
+  .nav {
+    display: none;
+    /* Если нужно открывающееся меню, добавь стили позиционирования здесь */
+  }
+
+  /* Стили для кнопки Бургер (3 полоски) */
+  .burger {
+    display: block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto; /* Толкаем вправо */
+    margin-right: 20px;
+    margin-top: 24px;
+  }
+  
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #252B42;
+    position: absolute;
+    transition: all 0.3s;
+  }
+  .burger span:nth-child(1) { top: 0; }
+  .burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  .burger span:nth-child(3) { bottom: 0; }
+
+  /* Login и Join Us */
+  .header__actions {
+    margin-left: 0;
+  }
+  .login {
+    margin-top: 24px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  .header .btn-primary {
+    padding: 8px 15px;
+    margin-top: 14px;
+    font-size: 11px;
+  }
+
+  /* ===== HERO СЕКЦИЯ ===== */
+  .hero {
+    min-height: auto;
+    padding-top: 100px; /* Отступ под шапку */
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column; /* Выстраиваем вертикально */
+    align-items: flex-start; /* Прижимаем контент влево */
+  }
+
+  .hero-green {
+    top: 70px;
+    height: 500px;
+  }
+
+  .hero-gray { display: none; }
+
+  /* Блок с текстом и кнопками (Порядок 1 - сверху) */
+  .hero__content {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 0;
+    text-align: left; /* Текст слева */
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+  
+  .hero__text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  /* Кнопки (Маленькие, не на весь экран) */
+  .hero__buttons {
+    justify-content: flex-start; /* Кнопки слева */
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .hero .btn-primary,
+  .hero .btn-outline {
+    width: auto; /* Ширина по содержимому */
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* ФОТО ДЕВУШКИ (Порядок 2 - под кнопками) */
+  .hero-woman-group {
+    order: 2; /* Ставим ПОСЛЕ текста */
+    position: static; /* Убираем абсолютное позиционирование, чтобы она не наезжала */
+    width: 260px;
+    height: 260px;
+    margin: 30px auto 0; /* Центрируем и отступ сверху */
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* ===== FEATURES (КАРТОЧКИ) ===== */
+  .features {
+    margin-top: 0; /* УБИРАЕМ отрицательный отступ! Теперь карточки ПОД фото */
+    margin-left: 0;
+    padding: 40px 50px; /* Отступы вокруг карточек */
+    z-index: 2;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0; /* Убираем margin: 0 auto */
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    padding: 0 20px;
+  }
+  .stats__inner {
+    flex-direction: column;
+  }
+  .stats__content {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .stats__images {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer__col {
+    width: 100%;
+  }
+  /* ===== PROMO секция ===== */
+.promo {
+  padding: 0 15px;
+}
+
+.promo__container {
+  padding: 60px 0;
+}
+
+.promo__row {
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Текст левее - убираем отступы */
+.promo__content {
+  margin-top: 0;
+  width: 100%;
+  padding-left: 0; /* Убираем отступ слева */
+  text-align: left;
+}
+
+.promo__line {
+  margin-bottom: 20px;
+}
+
+.promo__title {
+  font-size: 28px;
+  line-height: 38px;
+  margin-top: 20px;
+}
+
+.promo__text {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 20px;
+  word-spacing: normal;
+}
+
+.promocard__link {
+  margin-top: 25px;
+}
+
+/* Фото МЕНЬШЕ */
+.promo__media {
+  width: 100%;
+  max-width: 300px; /* УМЕНЬШАЕМ фото (было 513px) */
+  min-width: auto;
+  margin: 30px auto 0; /* Центрируем и отступ сверху */
+}
+
+.promo__image {
+  padding-bottom: 75%; /* Делаем блок компактнее */
+  border-radius: 8px;
+}
+
+.promo__play {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+/* ===== COURSES - кнопки меньше ===== */
+.course-card__link {
+  padding: 8px 16px; /* Уменьшили отступы (было 10px 20px) */
+  font-size: 12px; /* Уменьшили шрифт (было 14px) */
+  border-radius: 20px; /* Чуть меньше скругление */
+  gap: 8px; /* Меньше расстояние до стрелки */
+}
+
+.course-card__link svg {
+  width: 7px; /* Уменьшили стрелку (было 9.143px) */
+  height: 12px; /* Уменьшили стрелку (было 16px) */
+}
+.newsletter {
+    min-height: auto; /* Убираем фиксированную высоту */
+    padding: 40px 20px; /* Отступы по бокам */
+    margin-top: 60px;
+  }
+
+  .newsletter__container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .newsletter__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter__text {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  /* Форма подписки */
+  .newsletter__form {
+    display: flex;
+    flex-direction: row; /* Элементы в строку */
+    width: 100%;
+    max-width: 100%; /* На всю ширину контейнера */
+    height: auto; /* Высота авто */
+    transform: none; /* Убираем смещение */
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #E5E5E5;
+    background: #F9F9F9;
+  }
+
+  .newsletter__input {
+    flex: 1; /* Поле ввода занимает всё свободное место */
+    padding: 12px 15px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    min-width: 0;
+  }
+
+  .newsletter__input::placeholder {
+    color: #737373;
+  }
+
+  /* КНОПКА SUBSCRIBE */
+  .newsletter__button {
+    width: auto; /* !ВАЖНО: Ширина по содержимому, не 100% */
+    padding: 8px 15px; /* Компактные отступы */
+    font-size: 14px;
+    border-radius: 0 5px 5px 0; /* Скругление только справа */
+    white-space: nowrap; /* Текст в одну строку */
+    border: none;
+    background: #96BB7C;
+    color: white;
+    cursor: pointer;
+  }
+  .footer {
+    padding: 100px 20px;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки в ряд */
+    gap: 30px;
+    justify-content: flex-start;
+  }
+
+  /* Скрываем 3 колонку (Features) */
+  .footer__col:nth-child(3) {
+    display: none;
+  }
+
+  /* Скрываем 4 колонку (Resources) */
+  .footer__col:nth-child(4) {
+    display: none;
+  }
+
+  /* 5 колонка (Get In Touch) занимает всю ширину снизу */
+  .footer__col:nth-child(5) {
+     display: none;
+  }
+
+  /* Убираем фиксированную ширину у колонок */
+  .footer__col {
+    width: auto;
+  }
+
+  /* Уменьшаем шрифты для аккуратности */
+  .footer__title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .footer__list a {
+    font-size: 12px;
+  }
+
+  .contact-list li {
+    font-size: 12px;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 
 
