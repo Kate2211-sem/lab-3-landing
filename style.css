@@ -1284,5 +1284,269 @@ display: inline-flex;
     width: 35%; 
   }
 }
+@media (max-width: 768px) {
+  /* Контейнер */
+  .container {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0 15px;
+  }
+  
+  /* ===== HEADER ===== */
+  .header { height: 80px; }
+  .header__inner { height: 80px; padding-left: 20px; }
+  .header__logo { margin-top: 24px; margin-right: 40px; font-size: 20px; }
+  .nav { margin-top: 28px; gap: 15px; }
+  .nav__link { font-size: 12px; }
+  .header__actions { margin-left: auto; }
+  .login { margin-top: 28px; margin-right: 20px; font-size: 13px; }
+  .header .btn-primary { padding: 10px 18px; margin-top: 15px; font-size: 12px; }
+  
+  /* ===== HERO секция ===== */
+  .hero { min-height: 650px; padding-top: 80px; }
+  .hero-green { top: 80px; width: 100%; max-width: none; height: 480px; }
+  .hero-gray { display: none; }
+  
+  /* Девушка: делаем БОЛЬШЕ и сдвигаем ПРАВЕЕ */
+  .hero-woman-group {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 0%; /* Прижата к правому краю */
+    width: 360px;  /* Увеличили */
+    height: 380px; /* Увеличили */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right; /* Сдвигаем фокус картинки вправо */
+    z-index: 2;
+  }
+  
+  .hero__content {
+    width: 45%;
+    max-width: 400px;
+    margin-left: 0;
+    margin-top: 100px;
+    text-align: left;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+  }
+  .hero__subtitle { display: block; margin-bottom: 15px; font-size: 14px; }
+  .hero__title { font-size: 32px; line-height: 45px; margin-bottom: 20px; margin-top: 10px; }
+  .hero__text { display: block; margin-bottom: 30px; font-size: 14px; line-height: 20px; }
+  .hero__buttons { justify-content: flex-start; flex-wrap: wrap; gap: 12px; }
+  .hero .btn-primary, .hero .btn-outline { padding: 10px 20px; font-size: 12px; }
+  
+  /* ===== FEATURES - карточки ===== */
+  .features {
+    margin-top: -130px; /* ОТРИЦАТЕЛЬНЫЙ отступ: карточки заезжают на зелёный фон */
+    margin-left: 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10; /* Чтобы карточки были поверх фона */
+  }
+  
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  /* Третья карточка: строго ПОД ЛЕВОЙ, не по центру */
+  .feature-card:last-child {
+    grid-column: 1; /* Занимает первую колонку */
+    justify-self: start; /* Прижимается влево */
+    width: 100%;
+    max-width: 328px;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 328px;
+    padding: 20px 15px;
+  }
+  .feature-card__title { font-size: 18px; line-height: 24px; }
+  .feature-card__text { font-size: 12px; line-height: 16px; }
+   /* ===== STATS (Девочка и текст) ===== */
+.stats {
+  display: flex;
+  justify-content: center;
+  padding: 0 65px;
+}
+
+.stats__inner {
+  display: flex;
+  flex-direction: column; /* Ставим элементы в колонку */
+  align-items: flex-start; /* Выравниваем по левому краю */
+  gap: 40px; /* Расстояние между текстом и картинкой */
+}
+
+/* ТЕКСТ: ставим ПЕРВЫМ */
+.stats__content {
+  order: 1; /* Магия флекса: этот блок будет первым */
+  width: 100%;
+  margin-left: 0; /* Убираем огромный отступ десктопа */
+  margin-top: 60px; /* Отступ от шапки */
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stats__title {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+/* КАРТИНКА: ставим ВТОРОЙ */
+.stats__images {
+  order: 2; /* Этот блок будет вторым (внизу) */
+  width: 100%;
+  margin-top: 0; /* Убираем отступ десктопа */
+  display: flex;
+  justify-content: center; /* Центрируем картинку */
+}
+
+.stats__image-girl {
+  width: 100%;
+  max-width: 400px; /* Ограничиваем размер, чтобы не была огромной */
+  height: auto;
+}
+/* ===== PROMO секция ===== */
+.promo {
+  padding: 0 20px;
+}
+
+.promo__row {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.promo__content {
+  width: 100%;
+  margin-top: 40px;
+  padding-left: 65px; /* Отступ текста от левого края */
+}
+
+.promo__title {
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.promo__media {
+  width: 100%;
+  max-width: 350px; /* Уменьшаем картинку */
+  margin: 0 auto; /* Центрируем */
+  margin-top: 20px;
+}
+
+.promo__image {
+  padding-bottom: 60%; /* Делаем блок с видео меньше */
+}
+
+.promo__play {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+/* ===== COURSES секция ===== */
+.courses {
+  padding: 0 20px;
+}
+
+.courses__container {
+  padding: 80px 0;
+  gap: 60px;
+}
+
+.courses__header {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0; /* Убираем отрицательный отступ десктопа */
+  margin-top: 0;
+  padding-left: 15px; /* Отступ текста от левого края */
+  align-items: flex-start;
+  word-spacing: normal;
+}
+
+.courses__title {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.courses__description {
+  margin-left: 0;
+  word-spacing: normal;
+}
+
+.courses__grid {
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
+  gap: 20px;
+  width: 100%;
+}
+
+.course-card {
+  width: 100%;
+}
+
+.course-card__image {
+  height: 250px; /* Уменьшаем высоту картинки */
+}
+
+.course-card__content {
+  padding: 20px;
+  gap: 12px;
+}
+/* ===== FOOTER ===== */
+.footer {
+  padding: 45px 20px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки в ряд */
+  gap: 15px; /* Маленькие отступы между колонками */
+  justify-content: flex-start;
+}
+
+/* Скрываем 4 колонку (Resources) */
+.footer__col:nth-child(4) {
+  display: none;
+}
+
+/* 5 колонка (Get In Touch) ставим на место 4 */
+.footer__col:nth-child(5) {
+  grid-column: 4; /* Четвертая колонка в сетке */
+}
+
+.footer__col {
+  width: auto;
+  min-width: 0;
+}
+
+.footer__title {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer__list li {
+  margin-bottom: 6px;
+}
+
+.footer__list a {
+  font-size: 11px;
+}
+
+.contact-list li {
+  font-size: 11px;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+}
 
 
