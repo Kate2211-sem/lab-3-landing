@@ -1,0 +1,1288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #252B42;
+    line-height: 1.5;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: white;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1050px; 
+    margin-left: 196px; 
+    margin-right: auto;
+    padding: 0;
+}
+
+/* HEADER */
+/* HEADER */
+.header {
+    height: 91px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 10; 
+}
+
+.header__inner {
+    display: flex;
+    align-items: flex-start; 
+    padding-left: 36px;
+    height: 91px;
+}
+
+
+.header__logo {
+    margin-top: 30px; 
+    margin-right: 78px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px; 
+    font-family: Montserrat;
+
+font-style: normal;
+letter-spacing: 0.1px;
+}
+
+.nav {
+    display: flex;
+    margin-top: 33px; 
+    gap: 24px;
+}
+
+
+
+.nav__link {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #96BB7C;
+    text-decoration: underline;
+}
+
+.header__actions {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 240px; 
+}
+
+.login {
+   margin-top: 34px; 
+    margin-right: 45px;
+    color: #96BB7C;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+
+.header .btn-primary {
+    padding: 15px 29px;
+    margin-top: 19px; 
+    
+}
+.header .btn-primary:hover {
+    background: #7a9b63;
+}
+
+.header .btn-primary::after {
+    content: "→";
+    font-size: 12px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-outline {
+    color: #96BB7C;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    background: transparent;
+    border: 1px solid #96BB7C;
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: #96BB7C;
+    color: white;
+}
+
+/* HERO секция */
+.hero {
+    position: relative;
+    min-height: 1037px;
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+
+.hero-green {
+    position: absolute;
+    top: 91px;
+    left: 0;
+    width: 85%;
+    max-width: 1220px;
+    height: 617px;
+    background-image: url('../images/greenfon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: 0;
+}
+
+.hero-gray {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 50%;
+    max-width: 703px;
+    height: 544px;
+    background-image: url('../images/greyfon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 1;
+}
+
+
+
+.hero-woman-group {
+    position: absolute;
+    bottom: 34%;
+    right: 6%;
+    width: 620px;
+    height: 540px;
+    background-image: url('../images/woman-with-vectors.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 3;
+}
+.container {
+    max-width: 1050px; 
+    
+}
+/* Контент hero */
+.hero__content {
+    position: relative; 
+    z-index: 5;        
+    margin-left: 0px; 
+    margin-top: 177px; 
+    width: 599px;
+          
+}
+
+.hero__subtitle {
+    margin-bottom: 35px; 
+    color: #96BB7C;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0px;
+}
+
+.hero__title {
+    margin-bottom: 35px; 
+    font-size: 58px;
+    line-height: 80px;
+    color: #252B42;
+    margin-top: 37px;
+}
+
+.hero__text {
+    margin-bottom: 35px; 
+    font-size: 20px;
+    line-height: 30px;
+    color: #737373;
+    margin-top: 47px;
+   letter-spacing: 0.3px;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 10px; 
+}
+
+.hero .btn-primary,
+.hero .btn-outline {
+    padding: 15px 38px;
+}
+
+.btn-primary {
+    background: #96BB7C;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #7a9b63;
+}
+
+
+.features {
+    position: relative;
+    z-index: 3;
+    padding: 0 5%;
+    width: 100%;
+    margin-top: -358px;
+    margin-bottom: 80px;
+    margin-left: -60px;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 328px));
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   width: 340px;
+   
+    
+   padding: 30px 25px;
+    background: #FFF;
+    box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+    margin: 0 auto;
+}
+
+.feature-card__icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature-card__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    margin-bottom: 20px;
+}
+
+.feature-card__line {
+    width: 50px;
+    height: 2px;
+    background: #E74040;
+    margin-bottom: 20px;
+}
+
+.feature-card__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-bottom: 0;
+}
+
+/* Stats секция */
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.stats__container {
+    width: 100%;
+    max-width: 1050px;
+}
+
+.stats__inner {
+    display: flex;
+    justify-content: flex-start; /* Прижимаем блоки к левому краю контейнера */
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.stats__images {
+   position: relative;
+    width: 521px;
+    min-width: 300px;
+    height: auto;
+    flex-shrink: 0;
+    margin-top: 150px;
+}
+
+.stats__main-image {
+    position: relative;
+    width: 100%;
+}
+
+.stats__image-bg {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 27.625px;
+    background: #CFE4E7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.stats__image-girl {
+   position: static;
+   width: 100%;
+    height: auto;
+   
+   
+    display: block;
+}
+
+
+
+.stats__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    width: 381px; 
+    
+    gap: 35px; 
+    flex-shrink: 0;
+    margin-top: 155px;
+    margin-left: 115px;
+}
+
+.stats__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px; /* 125% */
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.stats__line {
+    width: 94px;
+    height: 7px;
+    background: #E74040;
+   
+    flex-shrink: 0;
+}
+
+.stats__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.stats__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+}
+
+.stats__link:hover {
+    color: #7a9b63;
+}
+
+.stats__arrow {
+    width: 9px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Promo секция */
+.promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.promo__container {
+    width: 100%;
+    max-width: 1050px;
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   align-items: flex-start;
+    width: 100%;
+    gap: 40px;
+}
+
+.promo__content {
+    flex: 1;
+    min-width: 280px;
+    margin-top: 220px;
+    
+}
+
+.promo__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    margin-top: 37px;
+   
+}
+
+.promo__line {
+    width: 94px;
+    height: 7px;
+    background: #E74040;
+    margin-bottom: 0px;
+}
+
+.promo__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+    word-spacing: 1px;
+}
+
+.promo__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.promo__link:hover {
+    color: #7a9b63;
+}
+
+.promo__media {
+   width: 513px;
+    min-width: 513px;
+    flex-shrink: 0;
+    margin-top: 165px;
+}
+
+.promo__image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 70%;
+    background-image: url('../images/foto3.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.promocard__link
+{
+display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    margin-top: 35px;
+
+}
+.promo__image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 14.58%, rgba(56,56,56,0.84) 100%);
+    pointer-events: none;
+}
+
+.promo__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 73.6px;
+    height: 73.6px;
+    background: #96BB7C;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Courses секция */
+.courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.courses__container {
+    width: 100%;
+    max-width: 1050px;
+    padding: 112px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 112px;
+}
+
+.courses__header {
+    width: 100%;
+    max-width: 691px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: -4px;
+    margin-left: -360px;
+    word-spacing: -3px;
+}
+
+.courses__subtitle {
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.courses__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.courses__description {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-left: 2px;
+    word-spacing: 1px;
+}
+
+.courses__grid {
+  display: grid;
+  /* Адаптивная сетка */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Карточка курса */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  height: 100%; /* Чтобы все карточки в ряду были одной высоты */
+}
+
+.course-card__image {
+  position: relative; /* Важно для позиционирования Sale и иконок */
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.course-card__icons {
+  position: absolute;
+  bottom: 24px;
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.course-card__icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-card__icon:hover {
+  background: #96BB7C;
+  color: #fff;
+}
+
+.course-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Немного увеличил отступ для визуальной чистоты */
+  padding: 25px 25px 35px 25px;
+  flex-grow: 1; /* Заставляет контент занимать всё свободное место */
+}
+
+/* Плашка Sale - теперь она всегда в углу картинки */
+.course-card__badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 0 10px;
+  background: #E74040;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  z-index: 2;
+}
+
+
+
+.course-card__category {
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    word-spacing: 3px;
+    margin-top: 2px;
+}
+
+.course-card__rating {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 5px;
+    background: #252B42;
+    border-radius: 20px;
+    
+}
+
+.course-card__star {
+    width: 16px;
+    height: 16px;
+}
+
+.course-card__rating-value {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.course-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-card__title {
+  color: #252B42;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+/* Текст описания */
+.course-card__text {
+  color: #737373;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: -8px;
+  margin-left: 0px;
+}
+
+
+.course-card__sales {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 4px;
+    margin-top: 3px;
+
+}
+
+.course-card__sales-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.course-card__sales-text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.course-card__prices {
+    display: flex;
+    gap: 5px;
+}
+
+.course-card__old-price {
+    color: #BDBDBD;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.course-card__new-price {
+    color: #FFAB71;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.course-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #96BB7C;
+    border-radius: 30px;
+    background: transparent;
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.course-card__link svg {
+    width: 9.143px;
+    height: 16px;
+}
+
+.course-card__link:hover {
+    background: #96BB7C;
+    color: #fff;
+}
+
+/* Testimonials секция */
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.testimonials__container {
+    width: 100%;
+    max-width: 1044px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 96px;
+}
+
+.testimonials__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 240px; /* Уменьши это значение */
+    position: relative; /* Добавь это */
+    z-index: 1;
+   
+}
+
+.testimonials__subtitle {
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    
+}
+
+.testimonials__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    word-spacing: -5px;
+}
+
+.testimonials__description {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin: 0;
+    max-width: 600px;
+}
+
+.testimonials__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.testimonial-card {
+    display: flex;
+    flex: 1;
+    min-width: 280px;
+    padding: 25px 25px 0 25px;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.testimonial-card__avatar {
+    width: 128px;
+    height: 128px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.testimonial-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-card__content {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.testimonial-card__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    max-width: 320px;
+    margin-top: -27px;
+}
+
+.testimonial-card__rating {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.star {
+    display: inline-block;
+    width: 22.014px;
+    height: 22.014px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.star.full {
+    background-image: url('../images/star1.png');
+}
+
+.star.empty {
+    background-image: url('../images/star0.png');
+}
+
+.testimonial-card__name {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin: 0;
+}
+
+.testimonial-card__position {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin-top: -10px;
+}
+
+/* Newsletter секция */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Используем твои размеры */
+    min-height: 594px; 
+    background: #FFF2F3;
+    margin-top: 100px;
+    box-sizing: border-box;
+    /* Убираем лишние ограничения, чтобы флекс работал на всю ширину */
+}
+
+.newsletter__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1050px;
+    /* Уменьшаем 80px до 40px или 50px, пока не совпадет */
+    padding: 40px 0 90px 0; 
+    text-align: center;
+}
+
+/* Форма подписки */
+.newsletter__form {
+    display: flex;
+    width: 100%;
+    max-width: 688px;
+    height: 58px; /* Задаем фиксированную высоту для формы как в макете */
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+    background: #F9F9F9;
+    overflow: hidden;
+    margin-top: 20px;
+    transform: translateY(25px);
+}
+
+.newsletter__subtitle {
+    color: #96BB7C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin: 0 0 10px 0;
+}
+
+.newsletter__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(20px, 3vw, 24px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+    margin: 0 0 10px 0;
+}
+
+.newsletter__text {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin: 0 0 40px 0;
+    max-width: 600px;
+    word-spacing: 2px;
+  
+}
+
+
+.newsletter__input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    outline: none;
+    min-width: 200px;
+}
+
+.newsletter__button {
+    padding: 15px 22.5px;
+    background: #96BB7C;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.newsletter__button:hover {
+    background: #7a9b63;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 45px 5%;
+    margin: 0 auto;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Это прижмет ВСЕ колонки к левому краю, где уже стоит первая */
+    justify-content: flex-start; 
+    /* Расстояние МЕЖДУ колонками (подбери под макет, например 70px или 50px) */
+    gap: 30px; 
+    width: 100%;
+    max-width: 1050px;
+}
+.footer__col {
+    /* flex: 0 1 auto значит: не расти, сжимайся если надо, размер по контенту */
+    flex: 0 1 auto; 
+    /* Фиксируем ширину, чтобы колонки были стройными как в макете */
+    width: 150px; 
+}
+
+/* Последнюю колонку (с контактами) можно сделать чуть шире, если текст не влезает */
+.footer__col:last-child {
+    width: 250px;
+}
+
+.footer__title {
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin: 0 0 20px 0;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__list li {
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.footer__list a {
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__list a:hover {
+    color: #96BB7C;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #737373;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.icon.phone {
+    background-image: url('../images/icon-phone.png');
+}
+
+.icon.location {
+    background-image: url('../images/icon-location.png');
+}
+
+.icon.email {
+    background-image: url('../images/icon-email.png');
+}
+
+@media (max-width: 1200px) {
+  
+  
+  .container {
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+ 
+  .features {
+    margin-left: 0;   
+    padding: 0 20px;
+  }
+
+  
+  .courses__header {
+    margin-left: 0;    
+    max-width: 100%;
+    text-align: center; 
+    align-items: center;
+  }
+  
+  
+  .hero-woman-group {
+    
+    right: 20px; 
+    width: 35%; 
+  }
+}
+
+
