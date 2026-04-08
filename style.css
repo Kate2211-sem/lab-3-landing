@@ -1,4 +1,3 @@
-/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
@@ -1254,12 +1253,870 @@ display: inline-flex;
 .icon.email {
     background-image: url('../images/icon-email.png');
 }
-/* Планшетная версия (768px) */
-@media (max-width: 768px) 
-{
+
+@media (max-width: 1200px) {
+  
+  
+  .container {
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+ 
+  .features {
+    margin-left: 0;   
+    padding: 0 20px;
+  }
+
+  
+  .courses__header {
+    margin-left: 0;    
+    max-width: 100%;
+    text-align: center; 
+    align-items: center;
+  }
+  
+  
+  .hero-woman-group {
     
+    right: 20px; 
+    width: 35%; 
+  }
 }
-/* Мобильная версия (320px - 480px) */
+@media (max-width: 768px) {
+  /* Контейнер */
+  .container {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0 15px;
+  }
+  
+  /* ===== HEADER ===== */
+  .header { height: 80px; }
+  .header__inner { height: 80px; padding-left: 20px; }
+  .header__logo { margin-top: 24px; margin-right: 40px; font-size: 20px; }
+  .nav { margin-top: 28px; gap: 15px; }
+  .nav__link { font-size: 12px; }
+  .header__actions { margin-left: auto; }
+  .login { margin-top: 28px; margin-right: 20px; font-size: 13px; }
+  .header .btn-primary { padding: 10px 18px; margin-top: 15px; font-size: 12px; }
+  
+  /* ===== HERO секция ===== */
+  .hero { min-height: 650px; padding-top: 80px; }
+  .hero-green { top: 80px; width: 100%; max-width: none; height: 480px; }
+  .hero-gray { display: none; }
+  
+  /* Девушка: делаем БОЛЬШЕ и сдвигаем ПРАВЕЕ */
+  .hero-woman-group {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 0%; /* Прижата к правому краю */
+    width: 360px;  /* Увеличили */
+    height: 380px; /* Увеличили */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right; /* Сдвигаем фокус картинки вправо */
+    z-index: 2;
+  }
+  
+  .hero__content {
+    width: 45%;
+    max-width: 400px;
+    margin-left: 0;
+    margin-top: 100px;
+    text-align: left;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+  }
+  .hero__subtitle { display: block; margin-bottom: 15px; font-size: 14px; }
+  .hero__title { font-size: 32px; line-height: 45px; margin-bottom: 20px; margin-top: 10px; }
+  .hero__text { display: block; margin-bottom: 30px; font-size: 14px; line-height: 20px; }
+  .hero__buttons { justify-content: flex-start; flex-wrap: wrap; gap: 12px; }
+  .hero .btn-primary, .hero .btn-outline { padding: 10px 20px; font-size: 12px; }
+  
+  /* ===== FEATURES - карточки ===== */
+  .features {
+    margin-top: -130px; /* ОТРИЦАТЕЛЬНЫЙ отступ: карточки заезжают на зелёный фон */
+    margin-left: 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10; /* Чтобы карточки были поверх фона */
+  }
+  
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  /* Третья карточка: строго ПОД ЛЕВОЙ, не по центру */
+  .feature-card:last-child {
+    grid-column: 1; /* Занимает первую колонку */
+    justify-self: start; /* Прижимается влево */
+    width: 100%;
+    max-width: 328px;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 328px;
+    padding: 20px 15px;
+  }
+  .feature-card__title { font-size: 18px; line-height: 24px; }
+  .feature-card__text { font-size: 12px; line-height: 16px; }
+   /* ===== STATS (Девочка и текст) ===== */
+.stats {
+  display: flex;
+  justify-content: center;
+  padding: 0 65px;
+}
+
+.stats__inner {
+  display: flex;
+  flex-direction: column; /* Ставим элементы в колонку */
+  align-items: flex-start; /* Выравниваем по левому краю */
+  gap: 40px; /* Расстояние между текстом и картинкой */
+}
+
+/* ТЕКСТ: ставим ПЕРВЫМ */
+.stats__content {
+  order: 1; /* Магия флекса: этот блок будет первым */
+  width: 100%;
+  margin-left: 0; /* Убираем огромный отступ десктопа */
+  margin-top: 60px; /* Отступ от шапки */
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stats__title {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+/* КАРТИНКА: ставим ВТОРОЙ */
+.stats__images {
+  order: 2; /* Этот блок будет вторым (внизу) */
+  width: 100%;
+  margin-top: 0; /* Убираем отступ десктопа */
+  display: flex;
+  justify-content: center; /* Центрируем картинку */
+}
+
+.stats__image-girl {
+  width: 100%;
+  max-width: 400px; /* Ограничиваем размер, чтобы не была огромной */
+  height: auto;
+}
+/* ===== PROMO секция ===== */
+.promo {
+  padding: 0 20px;
+}
+
+.promo__row {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.promo__content {
+  width: 100%;
+  margin-top: 40px;
+  padding-left: 65px; /* Отступ текста от левого края */
+}
+
+.promo__title {
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.promo__media {
+  width: 100%;
+  max-width: 350px; /* Уменьшаем картинку */
+  margin: 0 auto; /* Центрируем */
+  margin-top: 20px;
+}
+
+.promo__image {
+  padding-bottom: 60%; /* Делаем блок с видео меньше */
+}
+
+.promo__play {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+/* ===== COURSES секция ===== */
+.courses {
+  padding: 0 20px;
+}
+
+.courses__container {
+  padding: 80px 0;
+  gap: 60px;
+}
+
+.courses__header {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0; /* Убираем отрицательный отступ десктопа */
+  margin-top: 0;
+  padding-left: 15px; /* Отступ текста от левого края */
+  align-items: flex-start;
+  word-spacing: normal;
+}
+
+.courses__title {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.courses__description {
+  margin-left: 0;
+  word-spacing: normal;
+}
+
+.courses__grid {
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
+  gap: 20px;
+  width: 100%;
+}
+
+.course-card {
+  width: 100%;
+}
+
+.course-card__image {
+  height: 250px; /* Уменьшаем высоту картинки */
+}
+
+.course-card__content {
+  padding: 20px;
+  gap: 12px;
+}
+/* ===== FOOTER ===== */
+.footer {
+  padding: 45px 20px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки в ряд */
+  gap: 15px; /* Маленькие отступы между колонками */
+  justify-content: flex-start;
+}
+
+/* Скрываем 4 колонку (Resources) */
+.footer__col:nth-child(4) {
+  display: none;
+}
+
+/* 5 колонка (Get In Touch) ставим на место 4 */
+.footer__col:nth-child(5) {
+  grid-column: 4; /* Четвертая колонка в сетке */
+}
+
+.footer__col {
+  width: auto;
+  min-width: 0;
+}
+
+.footer__title {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer__list li {
+  margin-bottom: 6px;
+}
+
+.footer__list a {
+  font-size: 11px;
+}
+
+.contact-list li {
+  font-size: 11px;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+}
 @media (max-width: 480px) {
-    /* Тут будут правки для телефона */
+  /* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+  .container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 20px;
+  }
+
+  /* ===== HEADER И БУРГЕР ===== */
+  .header {
+    height: 70px;
+    position: fixed;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  
+  .header__inner {
+    height: 70px;
+    padding-left: 0; /* Отступы внутри контейнера */
+  }
+
+  .header__logo {
+    margin-top: 24px;
+    margin-right: 0;
+  }
+
+  /* Скрываем меню навигации */
+  .nav {
+    display: none;
+    /* Если нужно открывающееся меню, добавь стили позиционирования здесь */
+  }
+
+  /* Стили для кнопки Бургер (3 полоски) */
+  .burger {
+    display: block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto; /* Толкаем вправо */
+    margin-right: 20px;
+    margin-top: 24px;
+  }
+  
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #252B42;
+    position: absolute;
+    transition: all 0.3s;
+  }
+  .burger span:nth-child(1) { top: 0; }
+  .burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  .burger span:nth-child(3) { bottom: 0; }
+
+  /* Login и Join Us */
+  .header__actions {
+    margin-left: 0;
+  }
+  .login {
+    margin-top: 24px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  .header .btn-primary {
+    padding: 8px 15px;
+    margin-top: 14px;
+    font-size: 11px;
+  }
+
+  /* ===== HERO СЕКЦИЯ ===== */
+  .hero {
+    min-height: auto;
+    padding-top: 100px; /* Отступ под шапку */
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column; /* Выстраиваем вертикально */
+    align-items: flex-start; /* Прижимаем контент влево */
+  }
+
+  .hero-green {
+    top: 70px;
+    height: 500px;
+  }
+
+  .hero-gray { display: none; }
+
+  /* Блок с текстом и кнопками (Порядок 1 - сверху) */
+  .hero__content {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 0;
+    text-align: left; /* Текст слева */
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+  
+  .hero__text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  /* Кнопки (Маленькие, не на весь экран) */
+  .hero__buttons {
+    justify-content: flex-start; /* Кнопки слева */
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .hero .btn-primary,
+  .hero .btn-outline {
+    width: auto; /* Ширина по содержимому */
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* ФОТО ДЕВУШКИ (Порядок 2 - под кнопками) */
+  .hero-woman-group {
+    order: 2; /* Ставим ПОСЛЕ текста */
+    position: static; /* Убираем абсолютное позиционирование, чтобы она не наезжала */
+    width: 260px;
+    height: 260px;
+    margin: 30px auto 0; /* Центрируем и отступ сверху */
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* ===== FEATURES (КАРТОЧКИ) ===== */
+  .features {
+    margin-top: 0; /* УБИРАЕМ отрицательный отступ! Теперь карточки ПОД фото */
+    margin-left: 0;
+    padding: 40px 50px; /* Отступы вокруг карточек */
+    z-index: 2;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0; /* Убираем margin: 0 auto */
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    padding: 0 20px;
+  }
+  .stats__inner {
+    flex-direction: column;
+  }
+  .stats__content {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .stats__images {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer__col {
+    width: 100%;
+  }
+  /* ===== PROMO секция ===== */
+.promo {
+  padding: 0 15px;
+}
+
+.promo__container {
+  padding: 60px 0;
+}
+
+.promo__row {
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Текст левее - убираем отступы */
+.promo__content {
+  margin-top: 0;
+  width: 100%;
+  padding-left: 0; /* Убираем отступ слева */
+  text-align: left;
+}
+
+.promo__line {
+  margin-bottom: 20px;
+}
+
+.promo__title {
+  font-size: 28px;
+  line-height: 38px;
+  margin-top: 20px;
+}
+
+.promo__text {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 20px;
+  word-spacing: normal;
+}
+
+.promocard__link {
+  margin-top: 25px;
+}
+
+/* Фото МЕНЬШЕ */
+.promo__media {
+  width: 100%;
+  max-width: 300px; /* УМЕНЬШАЕМ фото (было 513px) */
+  min-width: auto;
+  margin: 30px auto 0; /* Центрируем и отступ сверху */
+}
+
+.promo__image {
+  padding-bottom: 75%; /* Делаем блок компактнее */
+  border-radius: 8px;
+}
+
+.promo__play {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+/* ===== COURSES - кнопки меньше ===== */
+.course-card__link {
+  padding: 8px 16px; /* Уменьшили отступы (было 10px 20px) */
+  font-size: 12px; /* Уменьшили шрифт (было 14px) */
+  border-radius: 20px; /* Чуть меньше скругление */
+  gap: 8px; /* Меньше расстояние до стрелки */
+}
+
+.course-card__link svg {
+  width: 7px; /* Уменьшили стрелку (было 9.143px) */
+  height: 12px; /* Уменьшили стрелку (было 16px) */
+}
+.newsletter {
+    min-height: auto; /* Убираем фиксированную высоту */
+    padding: 40px 20px; /* Отступы по бокам */
+    margin-top: 60px;
+  }
+
+  .newsletter__container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .newsletter__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter__text {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  /* Форма подписки */
+  .newsletter__form {
+    display: flex;
+    flex-direction: row; /* Элементы в строку */
+    width: 100%;
+    max-width: 100%; /* На всю ширину контейнера */
+    height: auto; /* Высота авто */
+    transform: none; /* Убираем смещение */
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #E5E5E5;
+    background: #F9F9F9;
+  }
+
+  .newsletter__input {
+    flex: 1; /* Поле ввода занимает всё свободное место */
+    padding: 12px 15px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    min-width: 0;
+  }
+
+  .newsletter__input::placeholder {
+    color: #737373;
+  }
+
+  /* КНОПКА SUBSCRIBE */
+  .newsletter__button {
+    width: auto; /* !ВАЖНО: Ширина по содержимому, не 100% */
+    padding: 8px 15px; /* Компактные отступы */
+    font-size: 14px;
+    border-radius: 0 5px 5px 0; /* Скругление только справа */
+    white-space: nowrap; /* Текст в одну строку */
+    border: none;
+    background: #96BB7C;
+    color: white;
+    cursor: pointer;
+  }
+  .footer {
+    padding: 100px 20px;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки в ряд */
+    gap: 30px;
+    justify-content: flex-start;
+  }
+
+  /* Скрываем 3 колонку (Features) */
+  .footer__col:nth-child(3) {
+    display: none;
+  }
+
+  /* Скрываем 4 колонку (Resources) */
+  .footer__col:nth-child(4) {
+    display: none;
+  }
+
+  /* 5 колонка (Get In Touch) занимает всю ширину снизу */
+  .footer__col:nth-child(5) {
+     display: none;
+  }
+
+  /* Убираем фиксированную ширину у колонок */
+  .footer__col {
+    width: auto;
+  }
+
+  /* Уменьшаем шрифты для аккуратности */
+  .footer__title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .footer__list a {
+    font-size: 12px;
+  }
+
+  .contact-list li {
+    font-size: 12px;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 320px) {
+    .header__logo {
+    font-size: 16px;        /* Было 24px */
+    margin-right: 5px;      /* Убираем лишний отступ */
+    margin-top: 26px;
+  }
+
+  /* 2. Делаем Бургер-меню компактнее */
+  .burger {
+    width: 20px;            /* Было 30px */
+    height: 14px;           /* Было 22px */
+    margin-right: 16px;      /* Уменьшаем отступ справа */
+    margin-top: 26px;
+  }
+  .burger span {
+    height: 2px;
+  }
+
+  /* 3. Уменьшаем ссылку Login */
+  .login {
+    font-size: 10px;        /* Было 12-14px */
+    margin-top: 26px;
+    margin-right: 5px;
+  }
+
+  /* 4. Уменьшаем кнопку JOIN US */
+  .header .btn-primary {
+    padding: 5px 8px;       /* Было 15px 25px */
+    font-size: 8px;        /* Было 12-14px */
+    margin-top: 18px;
+    line-height: 1.5;
+    
+  }
+  
+  /* Убираем стрелку внутри кнопки, если она мешает */
+  .header .btn-primary::after {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+  .hero__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .hero__text {
+    font-size: 11px;
+  }
+  
+  .stats__title,
+  .promo__title,
+  .courses__title,
+  .testimonials__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .feature-card__title {
+    font-size: 14px;
+  }
+   .features {
+    margin-top: 0;
+    padding: 40px 20px;
+  }
+  
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .courses {
+    padding: 0 20px;
+  }
+  
+  .courses__header {
+    margin-left: 0;
+    margin-top: 0;
+    word-spacing: normal;
+  }
+  
+  .courses__title {
+    font-size: 24px;
+  }
+  
+  .courses__grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 25px;
+  }
+  
+  .course-card {
+    width: 100%;
+    max-width: 280px; /* УЖЕ! Было 100% */
+    margin: 0 auto; /* Центрируем карточку */
+  }
+  
+  .course-card__image {
+    height: 220px; /* Меньше высота картинки */
+  }
+  
+  .course-card__content {
+    padding: 20px; /* Меньше отступы */
+  }
+  
+  .course-card__title {
+    font-size: 14px; /* Меньше заголовок */
+  }
+  
+  .course-card__text {
+    font-size: 12px; /* Меньше текст */
+  }
+  
+  .course-card__link {
+    padding: 8px 16px; /* Меньше кнопка */
+    font-size: 12px;
+  }
+  
+  /* ===== TESTIMONIALS ===== */
+  .testimonials {
+    padding: 0 20px;
+  }
+  
+  .testimonials__header {
+    margin-top: 60px;
+  }
+  
+  .testimonials__title {
+    font-size: 24px;
+    word-spacing: normal;
+  }
+  
+  .testimonials__row {
+    flex-direction: column;
+  }
+  
+  .testimonial-card {
+    min-width: auto;
+    width: 100%;
+    max-width: 280px; /* Тоже уже */
+    margin: 0 auto;
+  }
+  
+  /* ===== NEWSLETTER ===== */
+  .newsletter__form {
+    flex-direction: column;
+    height: auto;
+    transform: none;
+    border: none;
+    background: transparent;
+    gap: 10px; /* Расстояние между полем и кнопкой */
+  }
+
+  /* 2. Поле ввода Email (делаем на всю ширину с рамкой) */
+  .newsletter__input {
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 12px 15px;
+    background: #F9F9F9;
+  }
+
+  /* 3. САМА КНОПКА SUBSCRIBE (делаем маленькой) */
+  .newsletter__button {
+    width: auto;        /* !ВАЖНО: Ширина по содержимому, не на весь экран */
+    padding: 5px 10px; /* Уменьшаем отступы внутри (было 15px 22.5px) */
+    font-size: 11px;    /* Уменьшаем шрифт (было 14px) */
+    border-radius: 5px;
+    margin: 0 auto;     /* Центрируем кнопку */
+    display: block;
+  }
+  
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 40px 20px;
+  }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .footer__col:nth-child(3),
+  .footer__col:nth-child(4) {
+    display: none;
+  }
+  
+  .footer__col:nth-child(5) {
+    grid-column: span 2;
+    width: 100%;
+  }
+  
+  .footer__col {
+    width: auto;
+  }
+  
+  .footer__title {
+    font-size: 14px;
+  }
+  
+  .footer__list a {
+    font-size: 12px;
+  }
+
 }
